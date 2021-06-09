@@ -70,15 +70,13 @@ class HomeScreen extends StatelessWidget {
                     margin: EdgeInsets.symmetric(vertical: 30),
                     padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
                     decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(29.5)
-                    ),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(29.5)),
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: "Search",
-                        icon: SvgPicture.asset("assets/icons/search.svg"),
-                        border: InputBorder.none
-                      ),
+                          hintText: "Search",
+                          icon: SvgPicture.asset("assets/icons/search.svg"),
+                          border: InputBorder.none),
                     ),
                   ),
                   Expanded(
@@ -86,8 +84,24 @@ class HomeScreen extends StatelessWidget {
                       crossAxisCount: 2,
                       children: [
                         Container(
+                          padding: EdgeInsets.all(20),
                           decoration: BoxDecoration(
-                            color: Colors.white
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(13)),
+                          child: Column(
+                            children: [
+                              Spacer(),
+                              SvgPicture.asset("assets/icons/Hamburger.svg"),
+                              Spacer(),
+                              Text(
+                                "Diet Recommendation",
+                                textAlign: TextAlign.center,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headline6!
+                                    .copyWith(fontSize: 15),
+                              )
+                            ],
                           ),
                         )
                       ],
