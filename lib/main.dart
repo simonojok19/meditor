@@ -112,6 +112,46 @@ class HomeScreen extends StatelessWidget {
           )
         ],
       ),
+      bottomNavigationBar: Container(
+        height: 80,
+        color: Colors.white,
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            BottomNavItem(
+              title: "Today",
+              svgSrc: "assets/icons/calendar.svg",
+              press: () {},
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class BottomNavItem extends StatelessWidget {
+  final String svgSrc;
+  final String title;
+  final Function press;
+  final bool isActive;
+  const BottomNavItem({
+    Key? key,
+    required this.svgSrc,
+    required this.title,
+    required this.press,
+    this.isActive = false,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => press(),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [SvgPicture.asset(svgSrc), Text(title)],
+      ),
     );
   }
 }
