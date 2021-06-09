@@ -94,6 +94,14 @@ class HomeScreen extends StatelessWidget {
                           title: "Kegel Exercises",
                           svgSrc: "assets/icons/Excrecises.svg",
                         ),
+                        CategoryCard(
+                          title: "Meditation",
+                          svgSrc: "assets/icons/Meditation.svg",
+                        ),
+                        CategoryCard(
+                          title: "Yoga",
+                          svgSrc: "assets/icons/yoga.svg",
+                        ),
                       ],
                     ),
                   )
