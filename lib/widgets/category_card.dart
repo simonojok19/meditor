@@ -6,10 +6,12 @@ import '../constants.dart';
 class CategoryCard extends StatelessWidget {
   final String svgSrc;
   final String title;
+  final Function onPress;
   const CategoryCard({
     Key? key,
     required this.svgSrc,
     required this.title,
+    required this.onPress,
   }) : super(key: key);
 
   @override
@@ -29,7 +31,7 @@ class CategoryCard extends StatelessWidget {
         child: Material(
           color: Colors.transparent,
           child: InkWell(
-            onTap: () {},
+            onTap: () => onPress(),
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Column(

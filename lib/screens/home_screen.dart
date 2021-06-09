@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:meditor/screens/details_screen.dart';
 import 'package:meditor/widgets/bottom_nav_bar.dart';
 import 'package:meditor/widgets/category_card.dart';
 
@@ -69,18 +70,24 @@ class HomeScreen extends StatelessWidget {
                         CategoryCard(
                           title: "Diet Recommendation",
                           svgSrc: "assets/icons/Hamburger.svg",
+                          onPress: () {},
                         ),
                         CategoryCard(
                           title: "Kegel Exercises",
                           svgSrc: "assets/icons/Excrecises.svg",
+                          onPress: () {},
                         ),
                         CategoryCard(
                           title: "Meditation",
                           svgSrc: "assets/icons/Meditation.svg",
+                          onPress: () { Navigator.push(context, MaterialPageRoute(builder: (builder) {
+                            return DetailsScreen();
+                          })); },
                         ),
                         CategoryCard(
                           title: "Yoga",
                           svgSrc: "assets/icons/yoga.svg",
+                          onPress: () {},
                         ),
                       ],
                     ),
