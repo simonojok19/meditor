@@ -115,13 +115,24 @@ class HomeScreen extends StatelessWidget {
       bottomNavigationBar: Container(
         height: 80,
         color: Colors.white,
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             BottomNavItem(
               title: "Today",
               svgSrc: "assets/icons/calendar.svg",
+              press: () {},
+            ),
+            BottomNavItem(
+              title: "All Exercise",
+              svgSrc: "assets/icons/gym.svg",
+              press: () {},
+              isActive: true,
+            ),
+            BottomNavItem(
+              title: "Settings",
+              svgSrc: "assets/icons/Settings.svg",
               press: () {},
             ),
           ],
@@ -150,7 +161,13 @@ class BottomNavItem extends StatelessWidget {
       onTap: () => press(),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [SvgPicture.asset(svgSrc), Text(title)],
+        children: [
+          SvgPicture.asset(svgSrc),
+          Text(
+            title,
+            style: TextStyle(color: isActive ? kActiveIconColor : kTextColor),
+          )
+        ],
       ),
     );
   }
