@@ -82,34 +82,46 @@ class HomeScreen extends StatelessWidget {
                   Expanded(
                     child: GridView.count(
                       crossAxisCount: 2,
+                      childAspectRatio: .85,
                       children: [
-                        Container(
-                          padding: EdgeInsets.all(20),
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(13)),
-                          child: Column(
-                            children: [
-                              Spacer(),
-                              SvgPicture.asset("assets/icons/Hamburger.svg"),
-                              Spacer(),
-                              Text(
-                                "Diet Recommendation",
-                                textAlign: TextAlign.center,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headline6!
-                                    .copyWith(fontSize: 15),
-                              )
-                            ],
-                          ),
-                        )
+                        CategoryCard()
                       ],
                     ),
                   )
                 ],
               ),
             ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class CategoryCard extends StatelessWidget {
+  const CategoryCard({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(20),
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(13)),
+      child: Column(
+        children: [
+          Spacer(),
+          SvgPicture.asset("assets/icons/Hamburger.svg"),
+          Spacer(),
+          Text(
+            "Diet Recommendation",
+            textAlign: TextAlign.center,
+            style: Theme.of(context)
+                .textTheme
+                .headline6!
+                .copyWith(fontSize: 15),
           )
         ],
       ),
