@@ -71,7 +71,9 @@ class DetailsScreen extends StatelessWidget {
                       SessionCard(sessionNumber: 6, isDone: true),
                     ],
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Text(
                     "Meditation",
                     style: Theme.of(context).textTheme.title!.copyWith(
@@ -79,7 +81,9 @@ class DetailsScreen extends StatelessWidget {
                         ),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 20,),
+                    margin: EdgeInsets.symmetric(
+                      vertical: 20,
+                    ),
                     padding: EdgeInsets.all(10),
                     height: 90,
                     decoration: BoxDecoration(
@@ -87,24 +91,38 @@ class DetailsScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(13),
                       boxShadow: [
                         BoxShadow(
-                          offset: Offset(0, 17,),
-                          blurRadius: 23,
-                          spreadRadius: -13,
-                          color: kShadowColor
-                        ),
+                            offset: Offset(
+                              0,
+                              17,
+                            ),
+                            blurRadius: 23,
+                            spreadRadius: -13,
+                            color: kShadowColor),
                       ],
                     ),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        SvgPicture.asset("assets/icons/Meditation_women_small.svg",),
-                        SizedBox(width: 20,),
-                        Expanded(child: Column(
-                          children: [
-                            Text("Basic 2", style: Theme.of(context).textTheme.subtitle1,),
-                            Text("Start your deepen you practice"),
-                          ],
-                        ),)
+                        SvgPicture.asset(
+                          "assets/icons/Meditation_women_small.svg",
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Expanded(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Basic 2",
+                                style: Theme.of(context).textTheme.subtitle2,
+                              ),
+                              Text("Start your deepen you practice"),
+                            ],
+                          ),
+                        ),
+                        Padding(padding: EdgeInsets.all(10,),
+                        child: SvgPicture.asset("assets/icons/Lock.svg"),)
                       ],
                     ),
                   ),
