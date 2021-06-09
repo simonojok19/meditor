@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:meditor/screens/details_screen.dart';
 import 'package:meditor/widgets/bottom_nav_bar.dart';
 import 'package:meditor/widgets/category_card.dart';
+import 'package:meditor/widgets/search_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -47,19 +48,7 @@ class HomeScreen extends StatelessWidget {
                         .headline4!
                         .copyWith(fontWeight: FontWeight.w900),
                   ),
-                  Container(
-                    margin: EdgeInsets.symmetric(vertical: 30),
-                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(29.5)),
-                    child: TextField(
-                      decoration: InputDecoration(
-                          hintText: "Search",
-                          icon: SvgPicture.asset("assets/icons/search.svg"),
-                          border: InputBorder.none),
-                    ),
-                  ),
+                  SearchBar(),
                   Expanded(
                     child: GridView.count(
                       crossAxisCount: 2,

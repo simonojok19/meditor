@@ -16,10 +16,42 @@ class DetailsScreen extends StatelessWidget {
                 color: kBlueLightColor,
                 image: DecorationImage(
                     image: AssetImage("assets/images/meditation_bg.png"),
-                    fit: BoxFit.fitWidth
-                )
+                    fit: BoxFit.fitWidth)),
+          ),
+          SafeArea(
+              child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: size.height * 0.05,
+                ),
+                Text(
+                  "Meditation",
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline4!
+                      .copyWith(fontWeight: FontWeight.w900),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  "3-10 MIN Course",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                SizedBox(
+                    width: size.width * 0.6,
+                    child: Text(
+                      "Live happier and healthier by learning the fundamentals of meditation and mindfulness",
+                    ))
+              ],
             ),
-          )
+          ))
         ],
       ),
     );
