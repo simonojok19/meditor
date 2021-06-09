@@ -39,6 +39,20 @@ class HomeScreen extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     image:
                         AssetImage("assets/images/undraw_pilates_gpdb.png"))),
+          ),
+          SafeArea(
+            child: Column(
+              children: [
+                Container(
+                  height: 52,
+                  width: 52,
+                  decoration: BoxDecoration(
+                    color: Color(0xFFF2BEA1),
+                    shape: BoxShape.circle
+                  ),
+                )
+              ],
+            ),
           )
         ],
       ),
