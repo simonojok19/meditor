@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meditor/constants.dart';
 import 'package:meditor/widgets/search_bar.dart';
 
@@ -69,7 +70,44 @@ class DetailsScreen extends StatelessWidget {
                       SessionCard(sessionNumber: 5, isDone: true),
                       SessionCard(sessionNumber: 6, isDone: true),
                     ],
-                  )
+                  ),
+                  SizedBox(height: 20,),
+                  Text(
+                    "Meditation",
+                    style: Theme.of(context).textTheme.title!.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 20,),
+                    padding: EdgeInsets.all(10),
+                    height: 90,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(13),
+                      boxShadow: [
+                        BoxShadow(
+                          offset: Offset(0, 17,),
+                          blurRadius: 23,
+                          spreadRadius: -13,
+                          color: kShadowColor
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        SvgPicture.asset("assets/icons/Meditation_women_small.svg",),
+                        SizedBox(width: 20,),
+                        Expanded(child: Column(
+                          children: [
+                            Text("Basic 2", style: Theme.of(context).textTheme.subtitle1,),
+                            Text("Start your deepen you practice"),
+                          ],
+                        ),)
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -96,16 +134,14 @@ class SessionCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(13),
         child: Container(
           width: constraint.maxWidth / 2 - 10,
-          decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  offset: Offset(0, 17),
-                  blurRadius: 23,
-                  spreadRadius: -13,
-                  color: kShadowColor,
-                )
-              ]),
+          decoration: BoxDecoration(color: Colors.white, boxShadow: [
+            BoxShadow(
+              offset: Offset(0, 17),
+              blurRadius: 23,
+              spreadRadius: -13,
+              color: kShadowColor,
+            )
+          ]),
           child: Material(
             color: Colors.transparent,
             child: InkWell(
