@@ -56,6 +56,10 @@ class HomeScreen extends StatelessWidget {
                           color: Color(0xFFF2BEA1), shape: BoxShape.circle),
                       child: SvgPicture.asset("assets/icons/menu.svg"),
                     ),
+                  ),
+                  Text(
+                    "Good Morning \nShishir",
+                    style: Theme.of(context).textTheme.headline4,
                   )
                 ],
               ),
