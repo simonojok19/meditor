@@ -45,6 +45,7 @@ class HomeScreen extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Align(
                     alignment: Alignment.topRight,
@@ -59,7 +60,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Text(
                     "Good Morning \nShishir",
-                    style: Theme.of(context).textTheme.headline4,
+                    style: Theme.of(context).textTheme.headline4!.copyWith(fontWeight: FontWeight.w900),
                   )
                 ],
               ),
