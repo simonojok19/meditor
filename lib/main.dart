@@ -119,7 +119,9 @@ class CategoryCard extends StatelessWidget {
   final String svgSrc;
   final String title;
   const CategoryCard({
-    Key? key, required this.svgSrc, required this.title,
+    Key? key,
+    required this.svgSrc,
+    required this.title,
   }) : super(key: key);
 
   @override
@@ -128,7 +130,16 @@ class CategoryCard extends StatelessWidget {
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(13)),
+          borderRadius: BorderRadius.circular(13),
+          boxShadow: [
+            BoxShadow(
+                offset: Offset(0, 17),
+                blurRadius: 17,
+                spreadRadius: -23,
+                color: kShadowColor
+            )
+          ]
+      ),
       child: Column(
         children: [
           Spacer(),
@@ -137,10 +148,8 @@ class CategoryCard extends StatelessWidget {
           Text(
             title,
             textAlign: TextAlign.center,
-            style: Theme.of(context)
-                .textTheme
-                .headline6!
-                .copyWith(fontSize: 15),
+            style:
+                Theme.of(context).textTheme.headline6!.copyWith(fontSize: 15),
           )
         ],
       ),
