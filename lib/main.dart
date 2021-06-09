@@ -80,6 +80,18 @@ class HomeScreen extends StatelessWidget {
                         border: InputBorder.none
                       ),
                     ),
+                  ),
+                  Expanded(
+                    child: GridView.count(
+                      crossAxisCount: 2,
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white
+                          ),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
