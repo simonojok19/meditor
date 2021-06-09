@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meditor/constants.dart';
+import 'package:meditor/widgets/bottom_nav_bar.dart';
 import 'package:meditor/widgets/category_card.dart';
 
 void main() {
@@ -112,7 +113,7 @@ class HomeScreen extends StatelessWidget {
           )
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(),
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 }

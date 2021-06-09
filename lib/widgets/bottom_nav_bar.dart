@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
-class BottomNavigationBar extends StatelessWidget {
-  const BottomNavigationBar({
+import '../constants.dart';
+
+class BottomNavBar extends StatelessWidget {
+  const BottomNavBar({
     Key? key,
   }) : super(key: key);
 
