@@ -50,6 +50,7 @@ class HomeScreen extends StatelessWidget {
                   Align(
                     alignment: Alignment.topRight,
                     child: Container(
+                      margin: EdgeInsets.only(top: 10),
                       alignment: Alignment.center,
                       height: 52,
                       width: 52,
