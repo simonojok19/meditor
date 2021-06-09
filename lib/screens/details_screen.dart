@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meditor/constants.dart';
+import 'package:meditor/widgets/bottom_nav_bar.dart';
 import 'package:meditor/widgets/search_bar.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -25,113 +26,116 @@ class DetailsScreen extends StatelessWidget {
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    height: size.height * 0.05,
-                  ),
-                  Text(
-                    "Meditation",
-                    style: Theme.of(context).textTheme.headline4!.copyWith(
-                          fontWeight: FontWeight.w900,
-                        ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    "3-10 MIN Course",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: size.height * 0.05,
                     ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  SizedBox(
-                    width: size.width * 0.6,
-                    child: Text(
-                      "Live happier and healthier by learning the fundamentals of meditation and mindfulness",
-                    ),
-                  ),
-                  SizedBox(
-                    width: size.width * .5,
-                    child: SearchBar(),
-                  ),
-                  Wrap(
-                    spacing: 20,
-                    runSpacing: 20,
-                    children: [
-                      SessionCard(sessionNumber: 1, isDone: true),
-                      SessionCard(sessionNumber: 2, isDone: true),
-                      SessionCard(sessionNumber: 3, isDone: true),
-                      SessionCard(sessionNumber: 4, isDone: true),
-                      SessionCard(sessionNumber: 5, isDone: true),
-                      SessionCard(sessionNumber: 6, isDone: true),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    "Meditation",
-                    style: Theme.of(context).textTheme.title!.copyWith(
-                          fontWeight: FontWeight.bold,
-                        ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.symmetric(
-                      vertical: 20,
-                    ),
-                    padding: EdgeInsets.all(10),
-                    height: 90,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(13),
-                      boxShadow: [
-                        BoxShadow(
-                            offset: Offset(
-                              0,
-                              17,
-                            ),
-                            blurRadius: 23,
-                            spreadRadius: -13,
-                            color: kShadowColor),
-                      ],
-                    ),
-                    child: Row(
-                      children: [
-                        SvgPicture.asset(
-                          "assets/icons/Meditation_women_small.svg",
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Expanded(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Basic 2",
-                                style: Theme.of(context).textTheme.subtitle2,
-                              ),
-                              Text("Start your deepen you practice"),
-                            ],
+                    Text(
+                      "Meditation",
+                      style: Theme.of(context).textTheme.headline4!.copyWith(
+                            fontWeight: FontWeight.w900,
                           ),
-                        ),
-                        Padding(padding: EdgeInsets.all(10,),
-                        child: SvgPicture.asset("assets/icons/Lock.svg"),)
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      "3-10 MIN Course",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    SizedBox(
+                      width: size.width * 0.6,
+                      child: Text(
+                        "Live happier and healthier by learning the fundamentals of meditation and mindfulness",
+                      ),
+                    ),
+                    SizedBox(
+                      width: size.width * .5,
+                      child: SearchBar(),
+                    ),
+                    Wrap(
+                      spacing: 20,
+                      runSpacing: 20,
+                      children: [
+                        SessionCard(sessionNumber: 1, isDone: true),
+                        SessionCard(sessionNumber: 2, isDone: true),
+                        SessionCard(sessionNumber: 3, isDone: true),
+                        SessionCard(sessionNumber: 4, isDone: true),
+                        SessionCard(sessionNumber: 5, isDone: true),
+                        SessionCard(sessionNumber: 6, isDone: true),
                       ],
                     ),
-                  ),
-                ],
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      "Meditation",
+                      style: Theme.of(context).textTheme.title!.copyWith(
+                            fontWeight: FontWeight.bold,
+                          ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.symmetric(
+                        vertical: 20,
+                      ),
+                      padding: EdgeInsets.all(10),
+                      height: 90,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(13),
+                        boxShadow: [
+                          BoxShadow(
+                              offset: Offset(
+                                0,
+                                17,
+                              ),
+                              blurRadius: 23,
+                              spreadRadius: -13,
+                              color: kShadowColor),
+                        ],
+                      ),
+                      child: Row(
+                        children: [
+                          SvgPicture.asset(
+                            "assets/icons/Meditation_women_small.svg",
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Expanded(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Basic 2",
+                                  style: Theme.of(context).textTheme.subtitle2,
+                                ),
+                                Text("Start your deepen you practice"),
+                              ],
+                            ),
+                          ),
+                          Padding(padding: EdgeInsets.all(10,),
+                          child: SvgPicture.asset("assets/icons/Lock.svg"),)
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
         ],
       ),
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 }
