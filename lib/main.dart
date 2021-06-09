@@ -83,8 +83,13 @@ class HomeScreen extends StatelessWidget {
                     child: GridView.count(
                       crossAxisCount: 2,
                       childAspectRatio: .85,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20,
                       children: [
-                        CategoryCard()
+                        CategoryCard(),
+                        CategoryCard(),
+                        CategoryCard(),
+                        CategoryCard(),
                       ],
                     ),
                   )
