@@ -135,10 +135,8 @@ class CategoryCard extends StatelessWidget {
                 offset: Offset(0, 17),
                 blurRadius: 17,
                 spreadRadius: -23,
-                color: kShadowColor
-            )
-          ]
-      ),
+                color: kShadowColor)
+          ]),
       child: Material(
         color: Colors.transparent,
         child: InkWell(
@@ -153,8 +151,10 @@ class CategoryCard extends StatelessWidget {
                 Text(
                   title,
                   textAlign: TextAlign.center,
-                  style:
-                      Theme.of(context).textTheme.headline6!.copyWith(fontSize: 15),
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline6!
+                      .copyWith(fontSize: 15),
                 )
               ],
             ),
