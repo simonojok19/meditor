@@ -60,7 +60,25 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Text(
                     "Good Morning \nShishir",
-                    style: Theme.of(context).textTheme.headline4!.copyWith(fontWeight: FontWeight.w900),
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline4!
+                        .copyWith(fontWeight: FontWeight.w900),
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 30),
+                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(29.5)
+                    ),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: "Search",
+                        icon: SvgPicture.asset("assets/icons/search.svg"),
+                        border: InputBorder.none
+                      ),
+                    ),
                   )
                 ],
               ),
